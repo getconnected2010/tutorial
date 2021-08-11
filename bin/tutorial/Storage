@@ -1,0 +1,310 @@
+		//import java.util.Scanner;
+//NOTES	
+	//creates a class that can't be instantiated on its own. 'abstract'.
+	//the classes derived from it will still inherit properties and methods
+	public abstract class User
+	public abstract class Animal
+	//making a method abstract will force the classes that extend it to create
+	//statements that define how it is implemented.
+	public abstract String getFullName();  //this is in the parent class. Then child classes define it.
+	//methods attached to the class not the created object. 'static'
+	public static void fullName()
+	User.fullname()  //to access it.
+	//to create properties that can't be changed,
+	//make them private, then have the constructor assign value to them at initialization, but no setter methods for them.
+	//final classes with 'final' keyword can't be inherited
+	public final class Teacher {
+		//some metods go here
+	}
+	//to make a parent field available to child classes but keep it private add 'protected' keyword.
+	protected ArrayList al = ArrayList();
+	
+		
+		// TODO Auto-generated method stub
+		//System.out.println("Hello world");
+		//System.out.println("Hello again");
+		//int x = 9;
+		//double y = 5.1;
+		//int mod = 56 % 5;
+		//char z = 'h';
+		//String a = "hello";
+		//String text = new String("Hello");
+		//String b = "hi";
+		//double sq = Math.pow(y, x);
+		//final int G = 7 
+		
+		//scanner sets up sc to get input from user
+		//Scanner sc = new Scanner(System.in);
+		
+		//gets a string input. Even if numbers are put in, they are changed to string type.
+		//String myInput = sc.next();
+		//System.out.print(myInput);
+		
+		//gets an integer input. Entering strings will throw an error.
+		//int intInput = sc.nextInt();
+		//System.out.print(intInput);
+		
+		//gets a bullean. Anything else throws an error.
+		//boolean booInput = sc.nextBoolean();
+		//System.out.print(booInput);
+		
+		//gets a double input. Throws an exception on anything else.
+		//double douInput = sc.nextDouble();
+		//System.out.print(douInput);
+		
+		//convert a string input to an integer type6
+		//String strInput = sc.next();
+		//int converted = Integer.parseInt(strInput);
+		//System.out.print(converted + 2);
+		
+		//booleans on integers
+		//boolean abInt = x < y;
+		//System.out.print(abInt);
+		
+		//boolean on strings.
+		//boolean abStr = a.equals(b);
+		//System.out.print(abStr);
+		
+		//concatinate multiple booleans
+		//boolean abConc = x == y && a != b;
+		//System.out.print(abConc);
+		//boolean abOr = x == y || a != b;
+		//System.out.print(abOr);
+		
+		//not negation will change the outcome boolean
+		//boolean abNot = !(x == y || a != b);
+		//System.out.print(abNot);
+		
+		//boolean
+		boolean x = scan.nextBoolean();
+		System.out.println(x);
+		
+		//conditionals
+		//System.out.println("What is your name?");
+		//Scanner scan = new Scanner(System.in);
+		//String strInput = scan.next();
+		//if(strInput.equals("eden")) {
+		//	System.out.print("You typed eden");
+		//}
+		//else {
+		//	System.out.println("You typed "+ strInput);
+		//}
+		
+		BigDecimal money = scan.nextBigDecimal();
+		System.out.println(money);
+		
+	//arrays
+		System.out.println(Arrays.toString(x));   //prints out elements of array
+		int x[] = {1, 66, 32, 454, 63, 3};
+		Arrays.sort(x);              //sorts the array in ascending order. mutates it (void).
+		Array.sort(x, start, end)    //sorts a subsection of the array from start (inclusive) to end (exclusive). mutates it (void)
+		Arrays.parallelSort(x);      //faster sort
+		int found = Arrays.binarySearch(x, value);   //gives the index of the value. negative if not found.
+		//compares two arrays and returns a boolean. Same elements at same index.
+		Arrays.equals(x, y);  
+		//fills an array with specific value
+		Arrays.fill(x, value)  
+	//multidimentional arrays
+		int [][] grades = new int[3][4];
+		or
+		int [][] grades = {
+			{2, 4, 22},
+			{1, 5, 3},
+			{3, 6, 3},
+			{0, 2, 5}
+		};
+		System.out.println(grades[1][2]);
+		System.out.println(Arrays.deepToString(grades));
+		//iterage through two dimensional arrays
+		for(int i=0; i< grades.length; i++) {
+			for(int k=0; k< grades[i].length; k++) {
+				System.out.print(grades[i][k]);
+			}
+			System.out.println();
+		}
+//list
+		List<Integer> grades = new ArrayList<Integer>();
+		grades.add(3);
+		grades.add(5, value);      //for a new list will add the value at that index
+		grades.set(index, value);  //replaces an already existing value at that index.
+		grades.get(0);      //get(index)
+		grades.indexOf(7);  //
+		grades.contains(3);  //returns a boolean
+		grades.isEmpty();    //returns a boolean
+		grades.remove(1);    //returns items removed at the index
+		grades.clear();      //empties the list
+		grades.size()        //returns the length of the list
+		Collections.sort(grades); //sorts a list in ascending. void.
+		Collections.reverse(grades); //sorts in descending order. void.
+		
+		//creating a list from an array
+		Integer[] grades = {1, 4, 6, 3, 39, 2};
+		List<Integer> grades1 = Arrays.asList(grades);
+		List<Integer> grades1 = Arrayus.asList(2, 5, 34, 6}
+		
+		//creating array from a list
+		List<Integer> grades = Arrays.asList(2, 6, 32, 6, 3);
+		int[] gradeArray = new int[grades.size()];
+		for(int i = 0; i< grades.size(); i++) {
+			gradeArray[i] = grades.get(i);
+		}
+		System.out.println(Arrays.toString(gradeArray));
+		}
+		
+		//foreach loop on list or array
+		for(int grade : grades) {
+			System.out.println(grade);
+		}
+		
+//multidimentional lists
+	//foreach loop over multidimentional lists
+	List<List<Integer>> grades = new ArrayList<List<Integer>>();
+		grades.add(Arrays.asList(2, 6, 26, 2, 6));       //an array inside an array
+		grades.add(Arrays.asList(12, 56, 76, 4, 16));    //an array inside an array
+		grades.add(Arrays.asList(7, 74, 6, 10, 8));     //an array inside an array
+		grades.add(Arrays.asList(21, 68, 26, 27, 46));  //an array inside an array
+		for(List<Integer> grade : grades) {             //for each loop
+			for(int i : grade) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+		
+//oop 
+		//setters and getters
+		private String firstName;
+		private String lastName;
+	
+		public void setFirstName(String fname) {
+			firstName = fname;
+		}
+		public void setLastName(String lname) {
+			lastName = lname;
+		}
+		public String getFullName () {
+			return firstName + " " + lastName;
+		}
+		public String greet() {
+		return "hello " + getFullName();
+		}
+		//method overload. THe greet method above is modified to take params.
+		//depending on how we call it, determines which greet fn is invoked
+		public String greet(boolean nice) {
+			if(nice) {
+				return "Nice to meet you " + getFullName();
+			}
+			return "You are not so nice "+ getFullName();
+		}
+		//this method applies to the class with the static key word. call it using the class name User.listFullName(listName)
+		public static void listFullName(List<User> userList) {
+		for(User user: userList) {
+			System.out.println(user.getFullName());
+		}
+
+		//accessign the methods in the main
+		String[] fName= {"eden", "mititi", "lily", "nati"};
+		String[] lName = {"grace", "eyob", "eyob", "eyuye"};
+		List<User> fullName = new ArrayList<User>();
+		for(int i=0; i< fName.length; i++) {
+			User u = new User();
+			u.setFirstName(fName[i]);
+			u.setLastName(lName[i]);
+			fullName.add(u);
+		}
+		System.out.println(fullName.get(0).getFullName());
+		for(User x: fullName) {
+			System.out.println(x.getFullName());
+		}
+		//calling the static method on the class and passing the list 
+		User.listFullName(fullName);
+		
+	//constructors
+		public User(String fName, String lName) {
+			setFirstName(fName);
+			setLastName(lName);
+		}
+		//any classes that extend User can reference super as a constructor
+		public Student(String fName, String lName) {
+			super(fName, lName);
+		}
+		//invoking the constructor
+		User u = new User("eden", "grace");
+		
+		//dynmically adding elements into a list using constructor
+		List<User> fullName = new ArrayList<User>();
+		for(int i =0; i< fName.length; i++) {
+			fullName.add(i, new User(fName[i], lName[i]));
+		}
+	
+	//inheritance
+		//creates a constructor similar to the parent class constructor
+		public Student(String fName, String lName) {
+			super(fName, lName);
+		}
+		//invokes the greet() method from the parent class.
+		public void superExtent() {
+			super.greet();
+		}
+		
+//SPRING BOOT
+	//api endpoints
+	@RestController
+	public class CourseController {
+		//http://localhost:8080/courses
+		@GetMapping("/courses")
+		public List<Course> getAllCourses(){
+			return Arrays.asList(new Course(1, "Learn micro", "in minutes"), new Course(4, "Hello", "yes"));
+		}
+		@GetMapping("/course/one")
+		public Course getOneCourse() {
+			return new Course(3, "single course", "single detail");
+		}
+	}
+		
+		
+	//adding actuator dependency in pom.xml file
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-actuator</artifactId>
+	</dependency>
+	To access it
+	http://localhost:8080/actuator   lists all teh actuator values
+	http://localhost:8080/actuator/env  lists the environment values
+	http://localhost:8080/actuator/metrics  lists all the metrics
+	http://localhost:8080/actuator/metrics/http.server.requests  lists server traffic
+	in application properties file
+	management.endpoints.web.exposure.include=*   exposes all end points to the actuator dependency
+	management.endpoints.web.exposure.include=health,metrics  exposes only these endpoints to the actuator dependency
+
+	//adding devtool dependency for auto server restart
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+	</dependency>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
